@@ -9,8 +9,8 @@ for path, subdirs, files in os.walk(pathData):
         if (file.endswith('.tif') or file.endswith('.tiff')):
             pathInput = os.path.join(path, file)
             pathSplit = path.split('/')
-            print(pathSplit)
-            pathSaveDir = pathNerves + '/' + pathSplit[1] + '/' + pathSplit[3]
+            species=pathSplit[1].split('_')[2]
+            pathSaveDir = pathNerves + '/' + species + '/' + pathSplit[2]
             if (not os.path.exists(pathSaveDir)):
                 os.makedirs(pathSaveDir)
             pathSave = pathSaveDir + '/' + file.split('.')[0] + '.csv'

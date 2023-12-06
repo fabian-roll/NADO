@@ -21,25 +21,25 @@ FROM setup AS build
 
 WORKDIR /code
 
-COPY ["data/Arabidopsis/Arabidopsis 3D mesh and parent labels", "data/Arabidopsis/Arabidopsis 3D mesh and parent labels"]
+COPY data/topological_analysis_Arabidopsis_data data/topological_analysis_Arabidopsis_data
 
-COPY ["data/Cardamine/Cardamine 3D mesh and parent labels", "data/Cardamine/Cardamine 3D mesh and parent labels"]
+COPY data/topological_analysis_Cardamine_data data/topological_analysis_Cardamine_data
 
 COPY data/*.xlsx data/
 
 COPY nerves nerves
 
-COPY nerveFileNames.json .
-
-COPY ovuleIDs.json .
-
 COPY fvec_features.py .
+
+COPY compute_feature_vectors_json_creation.py .
 
 COPY compute_feature_vectors.py .
 
 COPY apply_cramer_test.r .
 
 COPY visualize_feature_vectors.py .
+
+RUN python3 compute_feature_vectors_json_creation.py
 
 RUN python3 compute_feature_vectors.py
 

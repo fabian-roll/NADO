@@ -1,10 +1,9 @@
+import os
 import numpy as np
 import pandas as pd
 import gudhi
-import os
 import json
 from sklearn.decomposition import PCA
-
 from fvec_features import *
 
 pathAnnotations = 'data'
@@ -20,7 +19,7 @@ with open('ovuleIDs.json', 'r') as fp:
     ovuleIDs = json.load(fp)
 
 # read in geometry spreadsheets
-df_C = pd.read_excel('data/Chi_cell_attributes_2-III_to_3-VI_exclvol_less_than_30_withlabels_final.xlsx')
+df_C = pd.read_excel('data/Cardamine_2-III-to-3-VI_cell_attributes_withtissueandparent_labels.xlsx')
 df_A = pd.read_excel('data/Arabidopsis Wild-type_All_Stages_High-quality_Long_File_Format.xlsx')
 
 #############################################################
@@ -40,12 +39,9 @@ for path, subdirs, files in os.walk(pathAnnotations):
         if (not file in ovuleIDs):
             continue
 
-        # Tejasvinee said to exclude this, as it isn't used for the other analyses
-        if file == '1663_parents_v6.csv': 
-            continue
         # We exclude this because of missing data: 
         # many chalaza cells have neighbors in the nerve with no tissue type given
-        if file == '534_mesh_parents.csv':
+        if file == '534_parents.csv':
             continue
         # We exclude this because the grayscale values in the segmentation do not encode cells
         if file == '436_parents.csv': 
@@ -60,15 +56,17 @@ for path, subdirs, files in os.walk(pathAnnotations):
             vertexLabels[int(data[0])] = int(data[1])
 
         pathSplit = path.split('/')
-        pathNerve = pathNerves + '/' + pathSplit[1] + '/' + pathSplit[3] + '/' + nerveFileNames[file].split('.')[0] + '.csv'
+        species=pathSplit[1].split('_')[2]
+        pathNerve = pathNerves + '/' + species + '/' + pathSplit[2] + '/' + nerveFileNames[file].split('.')[0] + '.csv'
         st = gudhi.SimplexTree()
         with open(pathNerve, 'r') as f:
             lines = f.readlines()
         for line in lines:
             data = line.split(',')
             st.insert(list(map(int, [element for element in data])))
-        pathFacevec = pathSplit[1] + '/' + pathSplit[3] + '/' + file.split('.')[0]
-
+        pathFacevec = species + '/' + pathSplit[2] + '/' + file.split('.')[0]
+        
+        
         # specify low-volume gaps by multiplying their label by 100
         (ovule_id, species) = ovuleIDs[file]
         if species == 'C':

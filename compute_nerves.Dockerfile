@@ -18,9 +18,9 @@ FROM setup AS build
 
 WORKDIR /code
 
-COPY ["data/Arabidopsis/Arabidopsis segmentations", "data/Arabidopsis/Arabidopsis segmentations"]
+COPY data/topological_analysis_Arabidopsis_data data/topological_analysis_Arabidopsis_data
 
-COPY ["data/Cardamine/Cardamine segmentations", "data/Cardamine/Cardamine segmentations"]
+COPY data/topological_analysis_Cardamine_data data/topological_analysis_Cardamine_data
 
 COPY tiff_nerve.cpp .
 

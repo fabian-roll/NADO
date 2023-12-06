@@ -1,0 +1,601 @@
+.
+├── Arabidopsis Wild-type_All_Stages_High-quality_Long_File_Format.xlsx
+├── Cardamine_2-III-to-3-VI_cell_attributes_withtissueandparent_labels.xlsx
+├── folder_structure.txt
+├── topological_analysis_Arabidopsis_data
+│   ├── 2-III
+│   │   ├── 294D
+│   │   │   ├── 294_D_and_E_segmentation.tif
+│   │   │   └── 294_D_parents.csv
+│   │   ├── 294E
+│   │   │   ├── 294_D_and_E_segmentation.tif
+│   │   │   └── 294_E_parents.csv
+│   │   ├── 406
+│   │   │   ├── 406_parents.csv
+│   │   │   └── 406_segmentation.tif
+│   │   ├── 416A
+│   │   │   ├── 416_A_parents.csv
+│   │   │   └── 416_A_segmentation.tif
+│   │   ├── 416B
+│   │   │   ├── 416_B_parents.csv
+│   │   │   └── 416_B_segmentation.tif
+│   │   ├── 473A
+│   │   │   ├── 473_A_parents.csv
+│   │   │   └── 473_A_segmentation.tif
+│   │   ├── 474B
+│   │   │   ├── 474_B_parents.csv
+│   │   │   └── 474_B_segmentation.tif
+│   │   ├── 603A
+│   │   │   ├── 603_A_parents.csv
+│   │   │   └── 603_A_segmentation.tif
+│   │   ├── 603C
+│   │   │   ├── 603_C_parents.csv
+│   │   │   └── 603_C_segmentation.tif
+│   │   └── 801F
+│   │       ├── 801_F_parents.csv
+│   │       └── 801_F_segmentation.tiff
+│   ├── 2-IV
+│   │   ├── 404
+│   │   │   ├── 404_parents.csv
+│   │   │   └── 404_segmentation.tif
+│   │   ├── 405A
+│   │   │   ├── 405_A_parents.csv
+│   │   │   └── 405_A_segmentation.tif
+│   │   ├── 405B
+│   │   │   ├── 405_B_parents.csv
+│   │   │   └── 405_B_segmentation.tif
+│   │   ├── 449
+│   │   │   ├── 449_parents.csv
+│   │   │   └── 449_segmentation.tif
+│   │   ├── 450
+│   │   │   ├── 450_parents.csv
+│   │   │   └── 450_segmentation.tif
+│   │   ├── 462
+│   │   │   ├── 462_parents.csv
+│   │   │   └── 462_segmentation.tif
+│   │   ├── 473C
+│   │   │   ├── 473C_parents.csv
+│   │   │   └── 473C_segmentation.tif
+│   │   ├── 474A
+│   │   │   ├── 474A_parents.csv
+│   │   │   └── 474A_segmentation.tif
+│   │   ├── 474C
+│   │   │   ├── 474C_parents.csv
+│   │   │   └── 474C_segmentation.tif
+│   │   └── 474E
+│   │       ├── 474E_parents.csv
+│   │       └── 474E_segmentation.tif
+│   ├── 2-V
+│   │   ├── 419
+│   │   │   ├── 419_parents.csv
+│   │   │   └── 419_segmentation.tif
+│   │   ├── 422
+│   │   │   ├── 422_parents.csv
+│   │   │   └── 422_segmentation.tif
+│   │   ├── 424A
+│   │   │   ├── 424A_Parent.csv
+│   │   │   └── 424A_Segmentation.tif
+│   │   ├── 424B
+│   │   │   ├── 424B_parents.csv
+│   │   │   └── 424B_segmentation.tif
+│   │   ├── 424C
+│   │   │   ├── 424C_parents.csv
+│   │   │   └── 424_C_segmentantion.tif
+│   │   ├── 425
+│   │   │   ├── 425_parents.csv
+│   │   │   └── 425_segmentation.tif
+│   │   ├── 467
+│   │   │   ├── 467_parents.csv
+│   │   │   └── 467_segmentation.tif
+│   │   ├── 472A
+│   │   │   ├── 472_A_and_C_segmentation.tif
+│   │   │   └── 472A_parents.csv
+│   │   ├── 472B
+│   │   │   ├── 472B_parents.csv
+│   │   │   └── 472B_segmentation.tif
+│   │   ├── 472C
+│   │   │   ├── 472_A_and_C_segmentation.tif
+│   │   │   └── 472C_parents.csv
+│   │   ├── 490A
+│   │   │   ├── 490A_parents.csv
+│   │   │   └── 490A_segemntation.tif
+│   │   ├── 490B
+│   │   │   ├── 490B_parents.csv
+│   │   │   └── 490B_segmentation.tif
+│   │   └── 490C
+│   │       ├── 490C_parents.csv
+│   │       ├── 490C_segmentation.tif
+│   │       └── MorphoGraphX.py
+│   ├── 3-I
+│   │   ├── 407A
+│   │   │   ├── 407A_parents.csv
+│   │   │   └── 407A_segmentation.tif
+│   │   ├── 420
+│   │   │   ├── 420_parents.csv
+│   │   │   └── 420_segmentation.tif
+│   │   ├── 439
+│   │   │   ├── 439_parents.csv
+│   │   │   └── 439_segmentation.tif
+│   │   ├── 440
+│   │   │   ├── 440_parents.csv
+│   │   │   └── 440_segmentation.tif
+│   │   ├── 451
+│   │   │   ├── 451_parents.csv
+│   │   │   └── 451_segmentation.tif
+│   │   ├── 515
+│   │   │   ├── 515_parents.csv
+│   │   │   └── 515_segmentation.tif
+│   │   ├── 543
+│   │   │   ├── 543_parents.csv
+│   │   │   └── 543_segmentation.tif
+│   │   ├── 606
+│   │   │   ├── 606_parents.csv
+│   │   │   └── 606_segmentation.tif
+│   │   ├── 608
+│   │   │   ├── 608_parents.csv
+│   │   │   └── 608_segmentation.tif
+│   │   └── 617B
+│   │       ├── 617B_parents.csv
+│   │       └── 617B_segmentation.tif
+│   ├── 3-II
+│   │   ├── 403
+│   │   │   ├── 403_parents.csv
+│   │   │   └── 403_segmentation.tif
+│   │   ├── 412
+│   │   │   ├── 412_parents.csv
+│   │   │   └── 412_segmentation.tif
+│   │   ├── 434
+│   │   │   ├── 434_parents.csv
+│   │   │   └── 434_segmentaation.tif
+│   │   ├── 486A
+│   │   │   ├── 486A_parents.csv
+│   │   │   └── 486A_segmentation.tif
+│   │   ├── 507B
+│   │   │   ├── 507B_parents.csv
+│   │   │   └── 507B_segmentation.tif
+│   │   ├── 508
+│   │   │   ├── 508_parents.csv
+│   │   │   └── 508_segmentation.tif
+│   │   ├── 509
+│   │   │   ├── 509_parents.csv
+│   │   │   └── 509_segmentation.tif
+│   │   ├── 522
+│   │   │   ├── 522_parents.csv
+│   │   │   └── 522_segmentation.tif
+│   │   ├── 526
+│   │   │   ├── 526_parents.csv
+│   │   │   └── 526_segmentation.tif
+│   │   └── 527
+│   │       ├── 527_parents.csv
+│   │       └── 527_segmentation.tif
+│   ├── 3-III
+│   │   ├── 428
+│   │   │   ├── 428_parents.csv
+│   │   │   └── 428_segmentation.tif
+│   │   ├── 429
+│   │   │   ├── 429_parents.csv
+│   │   │   └── 429_segmentation.tif
+│   │   ├── 430
+│   │   │   ├── 430_parents.csv
+│   │   │   └── 430_segmentation.tif
+│   │   ├── 436
+│   │   │   ├── 436_parents.csv
+│   │   │   └── 436_segmentation.tif
+│   │   ├── 495A
+│   │   │   ├── 495A_parents.csv
+│   │   │   └── 495A_segmentation.tif
+│   │   ├── 495B
+│   │   │   ├── 495B_parents.csv
+│   │   │   └── 495B_segmentation.tif
+│   │   ├── 507A
+│   │   │   ├── 507A_parents.csv
+│   │   │   └── 507A_segmentation.tif
+│   │   ├── 528
+│   │   │   ├── 528_parents.csv
+│   │   │   └── 528_segmentation.tif
+│   │   ├── 611
+│   │   │   ├── 611_parents.csv
+│   │   │   └── 611_segmentation.tif
+│   │   ├── 614
+│   │   │   ├── 614_parents.csv
+│   │   │   └── 614_segmentation.tif
+│   │   └── 616
+│   │       ├── 616_parents.csv
+│   │       └── 616_segmentation.tif
+│   ├── 3-IV
+│   │   ├── 410
+│   │   │   ├── 410_parents.csv
+│   │   │   └── 410_segmentation.tif
+│   │   ├── 491
+│   │   │   ├── 491_parents.csv
+│   │   │   └── 491_segmentation.tif
+│   │   ├── 494
+│   │   │   ├── 494_parents.csv
+│   │   │   └── 494_segmentation.tif
+│   │   ├── 512
+│   │   │   ├── 512_parents.csv
+│   │   │   └── 512_segmentation.tif
+│   │   ├── 513A
+│   │   │   ├── 513A_parents.csv
+│   │   │   └── 513A_segmentation.tif
+│   │   ├── 514
+│   │   │   ├── 514_parents.csv
+│   │   │   └── 514_segmentation.tif
+│   │   ├── 517
+│   │   │   ├── 517_parents.csv
+│   │   │   └── 517_segmentation.tif
+│   │   ├── 520
+│   │   │   ├── 520_parents.csv
+│   │   │   └── 520_segmentation.tif
+│   │   ├── 539
+│   │   │   ├── 539_parents.csv
+│   │   │   └── 539_segmentation.tif
+│   │   └── 610
+│   │       ├── 610_parents.csv
+│   │       └── 610_segmentation.tif
+│   ├── 3-V
+│   │   ├── 444
+│   │   │   ├── 444_parents.csv
+│   │   │   └── 444_segmentation.tif
+│   │   ├── 464
+│   │   │   ├── 464_parents.csv
+│   │   │   └── 464_segmentation.tif
+│   │   ├── 492
+│   │   │   ├── 492_parents.csv
+│   │   │   └── 492_segmentation.tif
+│   │   ├── 525
+│   │   │   ├── 525_parents.csv
+│   │   │   └── 525_segmentation.tif
+│   │   ├── 534
+│   │   │   ├── 534_parents.csv
+│   │   │   └── 534_segmentation.tif
+│   │   ├── 535
+│   │   │   ├── 535_parents.csv
+│   │   │   └── 535_segmentation.tif
+│   │   ├── 540
+│   │   │   ├── 540_parents.csv
+│   │   │   └── 540_segmentation.tif
+│   │   ├── 541
+│   │   │   ├── 541_parents.csv
+│   │   │   └── 541_segmentation.tif
+│   │   ├── 542
+│   │   │   ├── 542_parents.csv
+│   │   │   └── 542_segmentation.tif
+│   │   ├── 612
+│   │   │   ├── 612_parents.csv
+│   │   │   └── 612_segmentation.tif
+│   │   ├── 613
+│   │   │   ├── 613_parents.csv
+│   │   │   └── 613_segmentation.tif
+│   │   └── MorphoGraphX.py
+│   └── 3-VI
+│       ├── 555
+│       │   ├── 555_parents.csv
+│       │   └── 555_segmentation.tif
+│       ├── 557
+│       │   ├── 557_parents.csv
+│       │   └── 557_segmentation.tif
+│       ├── 559
+│       │   ├── 559_parents.csv
+│       │   └── 559_segmentation.tif
+│       ├── 561
+│       │   ├── 561_parents.csv
+│       │   └── 561_segmentation.tif
+│       ├── 751
+│       │   ├── 751_parents.csv
+│       │   └── 751_segmentation.tif
+│       ├── 752
+│       │   ├── 752_parents.csv
+│       │   └── 752_segmentation.tif
+│       ├── 753
+│       │   ├── 753_parents.csv
+│       │   └── 753_segmentation.tif
+│       ├── 754
+│       │   ├── 754_parents.csv
+│       │   └── 754_segmentation.tif
+│       ├── 755
+│       │   ├── 755_parents.csv
+│       │   └── 755_segmentation.tif
+│       └── 756
+│           ├── 756_parents.csv
+│           └── 756_segmentation.tif
+└── topological_analysis_Cardamine_data
+    ├── 2-III
+    │   ├── 1628A
+    │   │   ├── 1628A_parents.csv
+    │   │   └── 1628_segmentation.tif
+    │   ├── 1628B
+    │   │   ├── 1628B_parents.csv
+    │   │   └── 1628_segmentation.tif
+    │   ├── 1655
+    │   │   ├── 1655_parents.csv
+    │   │   └── 1655_segmentation.tif
+    │   ├── 1688
+    │   │   ├── 1688_parents.csv
+    │   │   └── 1688_segmentation.tif
+    │   ├── 1689
+    │   │   ├── 1689_parents.csv
+    │   │   └── 1689_segmentation.tif
+    │   ├── 1700
+    │   │   ├── 1700_parents.csv
+    │   │   └── 1700_segmentation.tif
+    │   ├── 1808
+    │   │   ├── 1808_parents.csv
+    │   │   └── 1808_segmentation.tif
+    │   ├── 1899A
+    │   │   ├── 1899A_parents.csv
+    │   │   └── 1899_segmentation.tif
+    │   ├── 1899B
+    │   │   ├── 1899B_parents.csv
+    │   │   └── 1899_segmentation.tif
+    │   └── 1900A
+    │       ├── 1900A_parents.csv
+    │       └── 1900_segmentation.tif
+    ├── 2-IV
+    │   ├── 1619A
+    │   │   ├── 1619A_parents.csv
+    │   │   └── 1619A_segmentation.tif
+    │   ├── 1637
+    │   │   ├── 1637_parents.csv
+    │   │   └── 1637_segmentation.tif
+    │   ├── 1647
+    │   │   ├── 1647_parents.csv
+    │   │   └── 1647_segmentation.tif
+    │   ├── 1669
+    │   │   ├── 1669_parents.csv
+    │   │   └── 1669_segmentation.tif
+    │   ├── 1670
+    │   │   ├── 1670_parents.csv
+    │   │   └── 1670_segmentation.tif
+    │   ├── 1695
+    │   │   ├── 1695_parents.csv
+    │   │   └── 1695_segmentation.tif
+    │   ├── 1702
+    │   │   ├── 1702_parents.csv
+    │   │   └── 1702_segmentation.tif
+    │   ├── 1703
+    │   │   ├── 1703_parents.csv
+    │   │   └── 1703_segmentation.tif
+    │   ├── 1809
+    │   │   ├── 1809_parents.csv
+    │   │   └── 1809_segmentation.tif
+    │   ├── 1927
+    │   │   ├── 1927_parents.csv
+    │   │   └── 1927_segmentation.tif
+    │   └── 1932
+    │       ├── 1932_parents.csv
+    │       └── 1932_segmentation.tif
+    ├── 2-V
+    │   ├── 1492B
+    │   │   ├── 1492B_parents.csv
+    │   │   └── 1492_segmentation.tif
+    │   ├── 1684
+    │   │   ├── 1684_parents.csv
+    │   │   └── 1684_segmentation.tif
+    │   ├── 1696
+    │   │   ├── 1696_parents.csv
+    │   │   └── 1696_segmentation.tif
+    │   ├── 1766
+    │   │   ├── 1766_parents.csv
+    │   │   └── 1766_segmentation.tif
+    │   ├── 1804
+    │   │   ├── 1804_parents.csv
+    │   │   └── 1804_segmentation.tif
+    │   ├── 1807
+    │   │   ├── 1807_parents.csv
+    │   │   └── 1807_segmentation.tif
+    │   ├── 1820
+    │   │   ├── 1820_parents.csv
+    │   │   └── 1820_segmentation.tif
+    │   ├── 1921
+    │   │   ├── 1921_parents.csv
+    │   │   └── 1921_segmentation.tif
+    │   ├── 1936
+    │   │   ├── 1936_parents.csv
+    │   │   └── 1936_segmentation.tif
+    │   └── 1937
+    │       ├── 1937_parents.csv
+    │       └── 1937_segmentation.tif
+    ├── 3-I
+    │   ├── 1629
+    │   │   ├── 1629_parents.csv
+    │   │   └── 1629_segmentation.tif
+    │   ├── 1630
+    │   │   ├── 1630_parents.csv
+    │   │   └── 1630_segmentation.tif
+    │   ├── 1660
+    │   │   ├── 1660_parents.csv
+    │   │   └── 1660_segmentation.tif
+    │   ├── 1675
+    │   │   ├── 1675_parents.csv
+    │   │   └── 1675_segmentation.tif
+    │   ├── 1682
+    │   │   ├── 1682_parents.csv
+    │   │   └── 1682_segmentation.tif
+    │   ├── 1683
+    │   │   ├── 1683_parents.csv
+    │   │   └── 1683_segmentation.tif
+    │   ├── 1692
+    │   │   ├── 1692_parents.csv
+    │   │   └── 1692_segmentation.tif
+    │   ├── 1704
+    │   │   ├── 1704_parents.csv
+    │   │   └── 1704_segmentation.tif
+    │   ├── 1779
+    │   │   ├── 1779_parents.csv
+    │   │   └── 1779_segmentation.tif
+    │   └── 1783B
+    │       ├── 1783B_parents.csv
+    │       └── 1783B_segmentation.tif
+    ├── 3-II
+    │   ├── 1661
+    │   │   ├── 1661_parents.csv
+    │   │   └── 1661_segmentation.tif
+    │   ├── 1772
+    │   │   ├── 1772_parents.csv
+    │   │   └── 1772_segmentation.tif
+    │   ├── 1782
+    │   │   ├── 1782_parents.csv
+    │   │   └── 1782_segmentation.tif
+    │   ├── 1783A
+    │   │   ├── 1783A_parents.csv
+    │   │   └── 1783A_segmentation.tif
+    │   ├── 1788A
+    │   │   ├── 1788A_parents.csv
+    │   │   └── 1788A_segmentation.tif
+    │   ├── 1803
+    │   │   ├── 1803_parents.csv
+    │   │   └── 1803_segmentation.tif
+    │   ├── 1812
+    │   │   ├── 1812_parents.csv
+    │   │   └── 1812_segmentation.tif
+    │   ├── 1830
+    │   │   ├── 1830_parents.csv
+    │   │   └── 1830_segmentation.tif
+    │   ├── 1920
+    │   │   ├── 1920_parents.csv
+    │   │   └── 1920_segmentation.tif
+    │   └── 1928
+    │       ├── 1928_parents.csv
+    │       └── 1928_segmentation.tif
+    ├── 3-III
+    │   ├── 1677
+    │   │   ├── 1677_parents.csv
+    │   │   └── 1677_segmentation.tif
+    │   ├── 1697
+    │   │   ├── 1697_parents.csv
+    │   │   └── 1697_segmentation.tif
+    │   ├── 1705
+    │   │   ├── 1705_parents.csv
+    │   │   └── 1705_segmentation.tif
+    │   ├── 1777
+    │   │   ├── 1777_parents.csv
+    │   │   └── 1777_segmentation.tif
+    │   ├── 1784
+    │   │   ├── 1784_parents.csv
+    │   │   └── 1784_segmentation.tif
+    │   ├── 1785A
+    │   │   ├── 1785A_parents.csv
+    │   │   └── 1785_segmentation.tif
+    │   ├── 1785B
+    │   │   ├── 1785B_parents.csv
+    │   │   └── 1785_segmentation.tif
+    │   ├── 1795
+    │   │   ├── 1795_parents.csv
+    │   │   └── 1795_segmentation.tif
+    │   ├── 1802
+    │   │   ├── 1802_parents.csv
+    │   │   └── 1802_segmentation.tif
+    │   ├── 1823
+    │   │   ├── 1823_parents.csv
+    │   │   └── 1823_segmentation.tif
+    │   └── 1833
+    │       ├── 1833_parents.csv
+    │       └── 1833_segmentation.tif
+    ├── 3-IV
+    │   ├── 1664
+    │   │   ├── 1664_parents.csv
+    │   │   └── 1664_segmentation.tif
+    │   ├── 1788B
+    │   │   ├── 1788B_parents.csv
+    │   │   └── 1788_segmentation.tif
+    │   ├── 1793
+    │   │   ├── 1793_parents.csv
+    │   │   └── 1793_segmentation.tif
+    │   ├── 1797
+    │   │   ├── 1797_parents.csv
+    │   │   └── 1797_segmentation.tif
+    │   ├── 1799
+    │   │   ├── 1799_parents.csv
+    │   │   └── 1799_segmentation.tif
+    │   ├── 1839
+    │   │   ├── 1839_parents.csv
+    │   │   └── 1839_segmentation.tif
+    │   ├── 1915
+    │   │   ├── 1915_parents.csv
+    │   │   └── 1915_segmentation.tif
+    │   ├── 1916
+    │   │   ├── 1916_parents.csv
+    │   │   └── 1916_segmentation.tif
+    │   ├── 1918
+    │   │   ├── 1918_parents.csv
+    │   │   └── 1918_segmentation.tif
+    │   └── 1925
+    │       ├── 1925_parents.csv
+    │       └── 1925_segmentation.tif
+    ├── 3-V
+    │   ├── 1662
+    │   │   ├── 1662_parents.csv
+    │   │   └── 1662_segmentation.tif
+    │   ├── 1768
+    │   │   ├── 1768_parents.csv
+    │   │   └── 1768_segmentation.tif
+    │   ├── 1769
+    │   │   ├── 1769_parents.csv
+    │   │   └── 1769_segmentation.tif
+    │   ├── 1770
+    │   │   ├── 1770_parents.csv
+    │   │   └── 1770_segmentation.tif
+    │   ├── 1787
+    │   │   ├── 1787_parents.csv
+    │   │   └── 1787_segmentation.tif
+    │   ├── 1789
+    │   │   ├── 1789_parents.csv
+    │   │   └── 1789_segmentation.tif
+    │   ├── 1790
+    │   │   ├── 1790_parents.csv
+    │   │   └── 1790_segmentation.tif
+    │   ├── 1791
+    │   │   ├── 1791_parents.csv
+    │   │   └── 1791_segmentation.tif
+    │   ├── 1792
+    │   │   ├── 1792_parents.csv
+    │   │   └── 1792_segmentation.tif
+    │   ├── 1794
+    │   │   ├── 1794_parents.csv
+    │   │   └── 1794_segmentation.tif
+    │   ├── 1796
+    │   │   ├── 1796_parents.csv
+    │   │   └── 1796_segmentation.tif
+    │   ├── 1798
+    │   │   ├── 1798_parents.csv
+    │   │   └── 1798_segmentation.tif
+    │   ├── 1824
+    │   │   ├── 1824_parents.csv
+    │   │   └── 1824_segmentation.tif
+    │   └── 1836
+    │       ├── 1836_parents.csv
+    │       └── 1836_segmentation.tif
+    └── 3-VI
+        ├── 1938
+        │   ├── 1938_parents.csv
+        │   └── 1938_segmentation.tif
+        ├── 1939
+        │   ├── 1939_parents.csv
+        │   └── 1939_segmentation.tif
+        ├── 1942A
+        │   ├── 1942A_parents.csv
+        │   └── 1942A_segmentation.tif
+        ├── 1949
+        │   ├── 1949_parents.csv
+        │   └── 1949_segmentation.tif
+        ├── 1958
+        │   ├── 1958_parents.csv
+        │   └── 1958_segmentation.tif
+        ├── 1964
+        │   ├── 1964_parents.csv
+        │   └── 1964_segmentation.tif
+        ├── 1969
+        │   ├── 1969_parents.csv
+        │   └── 1969_segmentation.tif
+        ├── 1971
+        │   ├── 1971_parents.csv
+        │   └── 1971_segmentation.tif
+        ├── 1972
+        │   ├── 1972_parents.csv
+        │   └── 1972_segmentation.tif
+        └── 1974
+            ├── 1974_parents.csv
+            └── 1974_segmentation.tif
+
+212 directories, 387 files
