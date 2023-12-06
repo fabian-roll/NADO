@@ -14,8 +14,8 @@ for path, subdirs, files in os.walk(pathAnnotations):
     for folder in subdirs:
         folder_path = os.path.join(path, folder)
         files_in_folder = os.listdir(folder_path)
-
-        if len(files_in_folder) == 2:
+        
+        if folder_path.count(os.sep) == 3:
             if files_in_folder[0].endswith('.csv'):
                 tiff_name=files_in_folder[1].split('.')[0]
                 nerveFileNames[files_in_folder[0]] = tiff_name + '.csv'
@@ -62,6 +62,13 @@ for id in ovule_ids:
         if id_str == '1783_B':
             ovuleIDs['1783B_parents.csv'] = ('1783_B', 'C')
             continue
+        if id_str == '1783a':
+            ovuleIDs['1783A_parents.csv'] = ('1783a', 'C')
+            continue
+        if id_str == '1788a':
+            ovuleIDs['1788A_parents.csv'] = ('1788a', 'C')
+            continue      
+
 
         n = len(id_str)
         matching_annFileName = [item for item in nerveFileNames.keys() if item[0:n] == id_str]
@@ -90,6 +97,60 @@ for id in ovule_ids:
         # We do some by hand...
         if id_str == '617_B':
             ovuleIDs['617B_parents.csv'] = ('617_B', 'A')
+            continue
+        if id_str == '474_C':
+            ovuleIDs['474C_parents.csv'] = ('474_C', 'A')
+            continue
+        if id_str == '424_B':
+            ovuleIDs['424B_parents.csv'] = ('424_B', 'A')
+            continue
+        if id_str == '424_C':
+            ovuleIDs['424C_parents.csv'] = ('424_C', 'A')
+            continue
+        if id_str == '472_B':
+            ovuleIDs['472B_parents.csv'] = ('472_B', 'A')
+            continue
+        if id_str == '490_A':
+            ovuleIDs['490A_parents.csv'] = ('490_A', 'A')
+            continue
+        if id_str == '490_B':
+            ovuleIDs['490B_parents.csv'] = ('490_B', 'A')
+            continue
+        if id_str == '473_C':
+            ovuleIDs['473C_parents.csv'] = ('473_C', 'A')
+            continue
+        if id_str == '474_A':
+            ovuleIDs['474A_parents.csv'] = ('474_A', 'A')
+            continue
+        if id_str == '474_E':
+            ovuleIDs['474E_parents.csv'] = ('474_E', 'A')
+            continue
+        if id_str == '424_A':
+            ovuleIDs['424A_Parent.csv'] = ('424_A', 'A')
+            continue
+        if id_str == '490_C':
+            ovuleIDs['490C_parents.csv'] = ('490_C', 'A')
+            continue
+        if id_str == '407_A':
+            ovuleIDs['407A_parents.csv'] = ('407_A', 'A')
+            continue
+        if id_str == '486_A':
+            ovuleIDs['486A_parents.csv'] = ('486_A', 'A')
+            continue
+        if id_str == '507_B':
+            ovuleIDs['507B_parents.csv'] = ('507_B', 'A')
+            continue
+        if id_str == '495_A':
+            ovuleIDs['495A_parents.csv'] = ('495_A', 'A')
+            continue
+        if id_str == '495_B':
+            ovuleIDs['495B_parents.csv'] = ('495_B', 'A')
+            continue
+        if id_str == '507_A':
+            ovuleIDs['507A_parents.csv'] = ('507_A', 'A')
+            continue
+        if id_str == '513_A':
+            ovuleIDs['513A_parents.csv'] = ('513_A', 'A')
             continue
 
         n = len(id_str)
