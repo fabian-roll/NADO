@@ -1,8 +1,11 @@
 # NADO: Nerve-based topological analysis of 3D digital ovules
 
-The code in this repository accompanies joint work with
-Tejasvinee Atul Mody, Alexander Rolle, Nico Stucki, Fabian Roll, Ulrich Bauer, and Kay Schneitz on the similarities and differences in the 3D cellular
-architectures underlying ovule developments.
+The code in this repository accompanies the following joint work.
+
+> Mody, T. A., Rolle, A., Stucki, N., Roll, F., Bauer, U. and Schneitz, K. (2023).
+> Diverse 3D cellular patterns underlie the development of Cardamine hirsuta and Arabidopsis thaliana ovules.
+> bioRxiv doi: [10.1101/2023.12.06.570408](https://doi.org/10.1101/2023.12.06.570408).
+
 
 ## Usage
 
