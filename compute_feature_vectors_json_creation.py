@@ -13,15 +13,13 @@ nerveFileNames = {}
 for path, subdirs, files in os.walk(pathAnnotations):
     for folder in subdirs:
         folder_path = os.path.join(path, folder)
-        files_in_folder = os.listdir(folder_path)
-        
+
         if folder_path.count(os.sep) == 3:
-            if files_in_folder[0].endswith('.csv'):
-                tiff_name=files_in_folder[1].split('.')[0]
-                nerveFileNames[files_in_folder[0]] = tiff_name + '.csv'
-            elif files_in_folder[1].endswith('.csv'):
-                tiff_name=files_in_folder[0].split('.')[0]
-                nerveFileNames[files_in_folder[1]] = tiff_name + '.csv'
+            files_in_folder = os.listdir(folder_path)
+            csv_files_in_folder = [item for item in files_in_folder if item.endswith('.csv')]
+            tif_files_in_folder = [item for item in files_in_folder if item.endswith('.tiff') or item.endswith('.tif')]
+            tiff_name=tif_files_in_folder[0].split('.')[0]
+            nerveFileNames[csv_files_in_folder[0]] = tiff_name + '.csv'
 
 
 # Create json for nerveFileNames
