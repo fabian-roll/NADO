@@ -33,7 +33,7 @@ with open('nerveFileNames.json', 'w') as fp:
 ###############################
 
 df_C = pd.read_excel('data/Cardamine_2-III-to-3-VI_cell_attributes_withtissueandparent_labels.xlsx')
-df_A = pd.read_excel('data/Arabidopsis Wild-type_All_Stages_High-quality_Long_File_Format.xlsx')
+df_A = pd.read_excel('data/Wild-type_HQ_source_data.xlsx')
 
 # Create a dictionary that associates to each annotation file name 
 # its ovule id from the geometry spreadsheets, if one is available, 
