@@ -5,16 +5,16 @@ ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update \
 && apt-get install --no-install-recommends --assume-yes --allow-downgrades \
     python3.10-full \
-    python3-numpy=1:1.21.5-1ubuntu22.04.1 \
-    python3-pandas=1.3.5+dfsg-3\
-    python3-gudhi=3.5.0+dfsg-1ubuntu2\
-    python3-sklearn=0.23.2-5ubuntu6\
-    python3-matplotlib=3.5.1-2build1\
-    python3-openpyxl=3.0.9-1 \
-    r-base=4.1.2-1ubuntu2 \
+    python3-numpy \
+    python3-pandas \
+    python3-gudhi \
+    python3-sklearn \
+    python3-matplotlib \
+    python3-openpyxl \
+    r-base \
 && rm -rf /var/lib/apt/lists/*
 
-RUN Rscript -e 'install.packages("https://cran.r-project.org/src/contrib/Archive/cramer/cramer_0.9-1.tar.gz", repos=NULL, type="source")'
+RUN Rscript -e 'install.packages("cramer")'
 
 
 FROM setup AS build
