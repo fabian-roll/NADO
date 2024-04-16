@@ -90,7 +90,7 @@ tissue_choices = ['ch', 'oi', 'ii', 'fu', 'nu', 'all-cells']
 
 subcomplex_labels = {'ch' : [6, 10],
                      'oi' : [1, 2],
-                     'ii' : [3, 4],
+                     'ii' : [3, 4, 14],
                      'fu' : [7],
                      'nu' : [5],
                      'all-cells' : [1,2,3,4,5,6,7,8,10,14]}
