@@ -23,8 +23,8 @@ with open('ovuleIDs.json', 'r') as fp:
 # read in geometry spreadsheets
 ###############################
 
-df_C = pd.read_excel('Ovule/geometry_data/Chi_cell_attributes_2-III_to_3-VI_exclvol_less_than_30_withlabels_exclplacenta_final.xlsx')
-df_A = pd.read_excel('Ovule/geometry_data/Arabidopsis Wild-type_All_Stages_High-quality_Long_File_Format.xlsx')
+df_C = pd.read_excel('data/Cardamine_2-III-to-3-VI_cell_attributes_withtissueandparent_labels.xlsx')
+df_A = pd.read_excel('data/Wild-type_HQ_source_data.xlsx')
 
 #############################################################
 # read in data to create list of labeled simplicial complexes
@@ -36,6 +36,10 @@ labeledSimplicialComplexes = []
 for path, subdirs, files in os.walk(pathAnnotations):
     for file in files:
         if (not file.endswith('.csv')):
+            continue
+
+        # we exclude the primordia data
+        if path.split('/')[2] == '1-I to 2-II':
             continue
 
         # we don't have geometry information,
@@ -63,14 +67,15 @@ for path, subdirs, files in os.walk(pathAnnotations):
             vertexLabels[int(data[0])] = int(data[1])
 
         pathSplit = path.split('/')
-        pathNerve = pathNerves + '/' + pathSplit[2] + '/' + pathSplit[4] + '/' + nerveFileNames[file].split('.')[0] + '.csv'
+        species=pathSplit[1].split('_')[2]
+        pathNerve = pathNerves + '/' + species + '/' + pathSplit[2] + '/' + nerveFileNames[file].split('.')[0] + '.csv'
         st = gudhi.SimplexTree()
         with open(pathNerve, 'r') as f:
             lines = f.readlines()
         for line in lines:
             data = line.split(',')
             st.insert(list(map(int, [element for element in data])))
-        pathFacevec = pathSplit[2] + '/' + pathSplit[4] + '/' + file.split('.')[0]
+        pathFacevec = species + '/' + pathSplit[2] + '/' + file.split('.')[0]
 
         # specify low-volume gaps by multiplying their label by 100
         (ovule_id, species) = ovuleIDs[file]

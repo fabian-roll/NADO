@@ -31,7 +31,12 @@ labeledSimplicialComplexes = []
 
 for path, subdirs, files in os.walk(pathAnnotations):
     for file in files:
+        # we are looking for parents files
         if (not file.endswith('.csv')):
+            continue
+
+        # we exclude the primordia data
+        if path.split('/')[2] == '1-I to 2-II':
             continue
 
         # we don't have geometry information,

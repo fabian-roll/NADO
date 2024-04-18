@@ -7,20 +7,37 @@ pathAnnotations = 'data'
 pathNerves = 'nerves'
 logFile = 'compute_feature_vectors_json_creation_log.txt'
 
+log = open(logFile, 'w') # we print information to a log file
+
 # for each annotation, the name of the corresponding nerve file
 nerveFileNames = {}
 
 for path, subdirs, files in os.walk(pathAnnotations):
-    for folder in subdirs:
-        folder_path = os.path.join(path, folder)
 
-        if folder_path.count(os.sep) == 3:
-            files_in_folder = os.listdir(folder_path)
-            csv_files_in_folder = [item for item in files_in_folder if item.endswith('.csv')]
-            tif_files_in_folder = [item for item in files_in_folder if item.endswith('.tiff') or item.endswith('.tif')]
-            tiff_name=tif_files_in_folder[0].split('.')[0]
-            nerveFileNames[csv_files_in_folder[0]] = tiff_name + '.csv'
-
+    if len(subdirs) == 0: # we are in a leaf
+        print(f'path : {path}', file=log)
+        csv_files = [item for item in files if item.endswith('.csv')]
+        tif_files = [item for item in files 
+                     if item.endswith('.tiff') or item.endswith('.tif')]
+        for csv_file in csv_files:
+            print(f'csv file : {csv_file}', file=log)
+            if len(tif_files) == 1:
+                tif_file = tif_files[0]
+                tif_name = tif_file.split('.')[0]
+                nerveFileNames[csv_file] = tif_name + '.csv'
+                print(f'tif file : {tif_file}', file=log)
+            else:
+                id = csv_file.split('_')[0]
+                candidate_tif_files = [item for item in tif_files
+                                    if item.startswith(id)]
+                num_candidates = len(candidate_tif_files)
+                if num_candidates != 1:
+                    raise ValueError(f'Found {num_candidates} candidate tif files')
+                else:
+                    tif_file = candidate_tif_files[0]
+                    tif_name = tif_file.split('.')[0]
+                    nerveFileNames[csv_file] = tif_name + '.csv'
+                    print(f'tif file : {tif_file}', file=log)
 
 # Create json for nerveFileNames
 with open('nerveFileNames.json', 'w') as fp:
@@ -40,7 +57,6 @@ df_A = pd.read_excel('data/Wild-type_HQ_source_data.xlsx')
 growth_stages = ['2-III', '2-IV', '2-V', '3-I', '3-II', '3-III', '3-IV', '3-V', '3-VI']
 ovuleIDs = {}
 
-log = open(logFile, 'w') # we print information to a log file
 print('Reading geometry spreadsheets', file=log)
 
 # Cardamine
