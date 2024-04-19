@@ -45,5 +45,5 @@ for path, subdirs, files in os.walk(pathData):
                 print('File '+ pathInput + ' is computed already.')
                 continue
             print('File '+ pathInput + ' ...')
-            proc = subprocess.Popen('./nerve'+' "'+ pathInput+'" ' +str(" > ")+ pathSaveTerminal, shell=True)
+            proc = subprocess.Popen('./tiff_nerve'+' "'+ pathInput+'" ' +str(" > ")+ pathSaveTerminal, shell=True)
             proc.wait()

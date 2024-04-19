@@ -2,6 +2,44 @@
 ├── Cardamine_2-III-to-3-VI_cell_attributes_withtissueandparent_labels.xlsx
 ├── folder_structure.txt
 ├── topological_analysis_Arabidopsis_data
+│   ├── 1-I to 2-II
+│   │   ├── 1-I
+│   │   │   ├── 785_parents.csv
+│   │   │   ├── 785_segmentation.tiff
+│   │   │   ├── 786_parents.csv
+│   │   │   ├── 786_segmentation.tiff
+│   │   │   ├── 787_parents.csv
+│   │   │   └── 787_segmentation.tiff
+│   │   ├── 1-II
+│   │   │   ├── 601_parents.csv
+│   │   │   ├── 601_segmentation.tif
+│   │   │   ├── 783_parents.csv
+│   │   │   └── 783_segmentation.tiff
+│   │   ├── 2-I
+│   │   │   ├── 589_parents.csv
+│   │   │   ├── 589_segmentation.tif
+│   │   │   ├── 760_parents.csv
+│   │   │   ├── 760_segmentation.tiff
+│   │   │   ├── 761_parents.csv
+│   │   │   ├── 761_segmentation.tiff
+│   │   │   ├── 762_parents.csv
+│   │   │   ├── 762_segmentation.tiff
+│   │   │   ├── 765_parents.csv
+│   │   │   ├── 765_segmentation.tiff
+│   │   │   ├── 766_parents.csv
+│   │   │   ├── 766_segmentation.tiff
+│   │   │   ├── 772_parents.csv
+│   │   │   └── 772_segmentation.tiff
+│   │   ├── 2-II
+│   │   │   ├── 763_parents.csv
+│   │   │   ├── 763_segmentation.tiff
+│   │   │   ├── 794_parents.csv
+│   │   │   ├── 794_segmentation.tiff
+│   │   │   ├── 796_parents.csv
+│   │   │   ├── 796_segmentation.tiff
+│   │   │   ├── 801_parents.csv
+│   │   │   └── 801_segmentation.tiff
+│   │   └── Arabidopsis primordia_cellvolume.xlsx
 │   ├── 2-III
 │   │   ├── 294D
 │   │   │   ├── 294_D_and_E_segmentation.tif
@@ -297,6 +335,55 @@
 │           ├── 756_parents.csv
 │           └── 756_segmentation.tif
 ├── topological_analysis_Cardamine_data
+│   ├── 1-I to 2-II
+│   │   ├── 1621_parents.csv
+│   │   ├── 1621_segmentation.tif
+│   │   ├── 1623_parents.csv
+│   │   ├── 1623_segmentation.tif
+│   │   ├── 1624_parents.csv
+│   │   ├── 1624_segmentation.tif
+│   │   ├── 1625_parents.csv
+│   │   ├── 1625_segmentation.tif
+│   │   ├── 1626_parents.csv
+│   │   ├── 1626_segmentation.tif
+│   │   ├── 1627_parents.csv
+│   │   ├── 1627_segmentation.tif
+│   │   ├── 1638_parents.csv
+│   │   ├── 1638_segmentation.tif
+│   │   ├── 1639_parents.csv
+│   │   ├── 1639_segmentation.tif
+│   │   ├── 1640_parents.csv
+│   │   ├── 1640_segmentation.tif
+│   │   ├── 1642_parents.csv
+│   │   ├── 1642_segmentation.tif
+│   │   ├── 1643_parents.csv
+│   │   ├── 1643_segmentation.tif
+│   │   ├── 1644_parents.csv
+│   │   ├── 1644_segmentation.tif
+│   │   ├── 1645_parents.csv
+│   │   ├── 1645_segmentation.tif
+│   │   ├── 1646_parents.csv
+│   │   ├── 1646_segmentation.tif
+│   │   ├── 1690_parents.csv
+│   │   ├── 1690_segmentation.tif
+│   │   ├── 1691_parents.csv
+│   │   ├── 1691_segmentation.tif
+│   │   ├── 1902_parents.csv
+│   │   ├── 1902_segmentation.tif
+│   │   ├── 1903_parents.csv
+│   │   ├── 1903_segmentation.tif
+│   │   ├── 1906_parents.csv
+│   │   ├── 1906_segmentation.tif
+│   │   ├── 1933_parents.csv
+│   │   ├── 1933_segmentation.tif
+│   │   ├── 1950_part1_parents.csv
+│   │   ├── 1950_part2_parents.csv
+│   │   ├── 1950_segmentation.tif
+│   │   ├── 1951_parents.csv
+│   │   ├── 1951_segmentation.tif
+│   │   ├── 1956_parents.csv
+│   │   ├── 1956_segmentation.tif
+│   │   └── Cardamine_1-I_to_2-II_cell_attributes_parentlabels.xlsx
 │   ├── 2-III
 │   │   ├── 1628A
 │   │   │   ├── 1628A_parents.csv
@@ -596,4 +683,4 @@
 │           └── 1974_segmentation.tif
 └── Wild-type_HQ_source_data.xlsx
 
-212 directories, 385 files
+218 directories, 466 files
